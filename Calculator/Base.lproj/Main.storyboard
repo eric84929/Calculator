@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="Minecraft.ttf">
@@ -259,11 +260,24 @@
                                 <color key="textColor" red="0.12730965699999999" green="0.12669463449999999" blue="0.1279246795" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5QN-kK-0vT">
+                                <rect key="frame" x="236" y="542" width="130" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="g3L-He-8at"/>
+                                    <constraint firstAttribute="width" constant="130" id="gBu-5S-PzB"/>
+                                </constraints>
+                                <state key="normal" image="clear"/>
+                                <connections>
+                                    <action selector="onClearPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sxz-f4-BlK"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="RE8-Pf-vGo" firstAttribute="trailing" secondItem="Lxd-p7-bkI" secondAttribute="trailing" constant="15" id="30d-8h-GFb"/>
                             <constraint firstItem="RE8-Pf-vGo" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="5NZ-Rh-7Gk"/>
+                            <constraint firstItem="5QN-kK-0vT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="216" id="8vc-17-UuF"/>
+                            <constraint firstItem="5QN-kK-0vT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="97r-31-gIP"/>
                             <constraint firstAttribute="trailing" secondItem="Lmw-aI-zwr" secondAttribute="trailing" id="A9y-aX-OFT"/>
                             <constraint firstItem="Lda-Rl-X9S" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="AHF-nG-IAa"/>
                             <constraint firstItem="Lmw-aI-zwr" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Bnx-mn-JD0"/>
@@ -271,7 +285,11 @@
                             <constraint firstItem="kOX-ga-OtQ" firstAttribute="centerY" secondItem="RE8-Pf-vGo" secondAttribute="centerY" constant="37" id="E79-Vz-yYT"/>
                             <constraint firstItem="kOX-ga-OtQ" firstAttribute="centerX" secondItem="RE8-Pf-vGo" secondAttribute="centerX" id="TMY-Ud-BbS"/>
                             <constraint firstItem="RE8-Pf-vGo" firstAttribute="trailing" secondItem="Lxd-p7-bkI" secondAttribute="trailing" constant="18" id="aF2-o1-hnf"/>
+                            <constraint firstItem="RE8-Pf-vGo" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="bPv-8l-CtP"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5QN-kK-0vT" secondAttribute="bottom" constant="14" id="cpx-4P-mYT"/>
                             <constraint firstItem="Lmw-aI-zwr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="g4b-jS-Mua"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5QN-kK-0vT" secondAttribute="trailing" constant="214" id="i6S-fh-mkk"/>
+                            <constraint firstItem="5QN-kK-0vT" firstAttribute="top" secondItem="kOX-ga-OtQ" secondAttribute="bottom" constant="25" id="kaS-lq-jW8"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Lda-Rl-X9S" secondAttribute="bottom" id="oYv-6E-05q"/>
                             <constraint firstItem="Lxd-p7-bkI" firstAttribute="top" secondItem="RE8-Pf-vGo" secondAttribute="top" constant="12" id="oij-4Z-7u3"/>
                             <constraint firstItem="RE8-Pf-vGo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rdK-rl-V0P"/>
@@ -280,6 +298,10 @@
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="30d-8h-GFb"/>
+                                <exclude reference="5NZ-Rh-7Gk"/>
+                                <exclude reference="8vc-17-UuF"/>
+                                <exclude reference="i6S-fh-mkk"/>
+                                <exclude reference="cpx-4P-mYT"/>
                             </mask>
                         </variation>
                     </view>
@@ -335,6 +357,7 @@
         <image name="9" width="111" height="114"/>
         <image name="add" width="111" height="114"/>
         <image name="backpanel" width="620" height="938"/>
+        <image name="clear" width="333" height="114"/>
         <image name="counter" width="516" height="133"/>
         <image name="divide" width="111" height="114"/>
         <image name="equal" width="111" height="114"/>
